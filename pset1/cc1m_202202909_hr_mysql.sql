@@ -1,3 +1,15 @@
+CREATE USER 'analaura'@localhost IDENTIFIED BY 'computacao@raiz';
+
+CREATE DATABASE uvv CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+GRANT ALL ON uvv.* TO 'analaura'@localhost;
+
+\q
+
+mysql -u analaura -p
+computacao@raiz
+
+use uvv;
 
 CREATE TABLE cargos (
                 id_cargo VARCHAR(10) NOT NULL,
@@ -7,13 +19,13 @@ CREATE TABLE cargos (
                 PRIMARY KEY (id_cargo)
 );
 
-ALTER TABLE cargos MODIFY COLUMN id_cargo VARCHAR(10) COMMENT 'Chave prim·ria que indica o cÛdigo de um determinado cargo.';
+ALTER TABLE cargos MODIFY COLUMN id_cargo VARCHAR(10) COMMENT 'Chave prim√°ria que indica o c√≥digo de um determinado cargo.';
 
 ALTER TABLE cargos MODIFY COLUMN cargo VARCHAR(35) COMMENT 'Nome do cargo.';
 
-ALTER TABLE cargos MODIFY COLUMN salario_minimo DECIMAL(8, 2) COMMENT 'Sal·rio mÌnimo mensal que um funcion·rio em determinado cargo recebe.';
+ALTER TABLE cargos MODIFY COLUMN salario_minimo DECIMAL(8, 2) COMMENT 'Sal√°rio m√≠nimo mensal que um funcion√°rio em determinado cargo recebe.';
 
-ALTER TABLE cargos MODIFY COLUMN salario_maximo DECIMAL(8, 2) COMMENT 'Sal·rio m·ximo mensal que um funcion·rio em determinado cargo recebe.';
+ALTER TABLE cargos MODIFY COLUMN salario_maximo DECIMAL(8, 2) COMMENT 'Sal√°rio m√°ximo mensal que um funcion√°rio em determinado cargo recebe.';
 
 
 CREATE UNIQUE INDEX cargos_idx
@@ -28,9 +40,9 @@ CREATE TABLE regioes (
 
 ALTER TABLE regioes COMMENT 'tabela1';
 
-ALTER TABLE regioes MODIFY COLUMN id_regiao INTEGER COMMENT 'Chave prim·ria que indica o cÛdigo da regi„o onde se encontra determinada facilidade da empresa.';
+ALTER TABLE regioes MODIFY COLUMN id_regiao INTEGER COMMENT 'Chave prim√°ria que indica o c√≥digo da regi√£o onde se encontra determinada facilidade da empresa.';
 
-ALTER TABLE regioes MODIFY COLUMN nome VARCHAR(25) COMMENT 'Nome da regi„o.';
+ALTER TABLE regioes MODIFY COLUMN nome VARCHAR(25) COMMENT 'Nome da regi√£o.';
 
 
 CREATE UNIQUE INDEX regioes_idx
@@ -44,11 +56,11 @@ CREATE TABLE paises (
                 PRIMARY KEY (id_pais)
 );
 
-ALTER TABLE paises MODIFY COLUMN id_pais CHAR(2) COMMENT 'Chave prim·ria que indica o cÛdigo do paÌs onde se encontra determinada facilidade da empresa.';
+ALTER TABLE paises MODIFY COLUMN id_pais CHAR(2) COMMENT 'Chave prim√°ria que indica o c√≥digo do pa√≠s onde se encontra determinada facilidade da empresa.';
 
-ALTER TABLE paises MODIFY COLUMN nome VARCHAR(50) COMMENT 'Nome do paÌs.';
+ALTER TABLE paises MODIFY COLUMN nome VARCHAR(50) COMMENT 'Nome do pa√≠s.';
 
-ALTER TABLE paises MODIFY COLUMN id_regiao INTEGER COMMENT 'Chave estrangeira que indica o cÛdigo da regi„o (referente ‡ tabela regiıes) onde se encontra determinada facilidade da empresa.';
+ALTER TABLE paises MODIFY COLUMN id_regiao INTEGER COMMENT 'Chave estrangeira que indica o c√≥digo da regi√£o (referente √† tabela regi√µes) onde se encontra determinada facilidade da empresa.';
 
 
 CREATE UNIQUE INDEX paises_idx
@@ -65,17 +77,17 @@ CREATE TABLE localizacoes (
                 PRIMARY KEY (id_localizacao)
 );
 
-ALTER TABLE localizacoes MODIFY COLUMN id_localizacao INTEGER COMMENT 'Chave prim·ria que indica o cÛdigo de uma localizaÁ„o onde existe um departamento da empresa.';
+ALTER TABLE localizacoes MODIFY COLUMN id_localizacao INTEGER COMMENT 'Chave prim√°ria que indica o c√≥digo de uma localiza√ß√£o onde existe um departamento da empresa.';
 
-ALTER TABLE localizacoes MODIFY COLUMN endereco VARCHAR(50) COMMENT 'EndereÁo (logradouro, n˙mero) de determinada localizaÁ„o da empresa.';
+ALTER TABLE localizacoes MODIFY COLUMN endereco VARCHAR(50) COMMENT 'Endere√ßo (logradouro, n√∫mero) de determinada localiza√ß√£o da empresa.';
 
-ALTER TABLE localizacoes MODIFY COLUMN cep VARCHAR(12) COMMENT 'CEP referente ‡ determinada localizaÁ„o da empresa.';
+ALTER TABLE localizacoes MODIFY COLUMN cep VARCHAR(12) COMMENT 'CEP referente √† determinada localiza√ß√£o da empresa.';
 
 ALTER TABLE localizacoes MODIFY COLUMN cidade VARCHAR(50) COMMENT 'Cidade onde se encontra determinada facilidade da empresa.';
 
 ALTER TABLE localizacoes MODIFY COLUMN uf VARCHAR(25) COMMENT 'Cidade onde se encontra determinada facilidade da empresa.';
 
-ALTER TABLE localizacoes MODIFY COLUMN id_pais CHAR(2) COMMENT 'Chave estrangeira que indica o cÛdigo do paÌs (referente ‡ tabela paÌses) onde se encontra determinada facilidade da empresa.';
+ALTER TABLE localizacoes MODIFY COLUMN id_pais CHAR(2) COMMENT 'Chave estrangeira que indica o c√≥digo do pa√≠s (referente √† tabela pa√≠ses) onde se encontra determinada facilidade da empresa.';
 
 
 CREATE TABLE departamentos (
@@ -85,11 +97,11 @@ CREATE TABLE departamentos (
                 PRIMARY KEY (id_departamento)
 );
 
-ALTER TABLE departamentos MODIFY COLUMN id_departamento INTEGER COMMENT 'Chave prim·ria que indica o cÛdigo de um departamento.';
+ALTER TABLE departamentos MODIFY COLUMN id_departamento INTEGER COMMENT 'Chave prim√°ria que indica o c√≥digo de um departamento.';
 
 ALTER TABLE departamentos MODIFY COLUMN nome VARCHAR(50) COMMENT 'Nome do departamento.';
 
-ALTER TABLE departamentos MODIFY COLUMN id_localizacao INTEGER COMMENT 'Chave estrangeira para a tabela localizaÁıes, que especifÌca em qual local fica determinado departamento.';
+ALTER TABLE departamentos MODIFY COLUMN id_localizacao INTEGER COMMENT 'Chave estrangeira para a tabela localiza√ß√µes, que especif√≠ca em qual local fica determinado departamento.';
 
 
 CREATE UNIQUE INDEX departamentos_idx
@@ -110,27 +122,27 @@ CREATE TABLE empregados (
                 PRIMARY KEY (id_empregado)
 );
 
-ALTER TABLE empregados COMMENT 'Tabela que lista os funcion·rios da empresa e suas informaÁıes.';
+ALTER TABLE empregados COMMENT 'Tabela que lista os funcion√°rios da empresa e suas informa√ß√µes.';
 
-ALTER TABLE empregados MODIFY COLUMN id_empregado INTEGER COMMENT 'Chave prim·ria que indica o cÛdigo ˙nico de cadastro do funcion·rio (chave prim·ria da tabela empregados).';
+ALTER TABLE empregados MODIFY COLUMN id_empregado INTEGER COMMENT 'Chave prim√°ria que indica o c√≥digo √∫nico de cadastro do funcion√°rio (chave prim√°ria da tabela empregados).';
 
-ALTER TABLE empregados MODIFY COLUMN nome VARCHAR(75) COMMENT 'Nome completo do funcion·rio.';
+ALTER TABLE empregados MODIFY COLUMN nome VARCHAR(75) COMMENT 'Nome completo do funcion√°rio.';
 
-ALTER TABLE empregados MODIFY COLUMN email VARCHAR(35) COMMENT 'EndereÁo de e-mail dos funcion·rios (antes do @)';
+ALTER TABLE empregados MODIFY COLUMN email VARCHAR(35) COMMENT 'Endere√ßo de e-mail dos funcion√°rios (antes do @)';
 
-ALTER TABLE empregados MODIFY COLUMN telefone VARCHAR(20) COMMENT 'Telefone do funcion·rio, identificando paÌs e regi„o.';
+ALTER TABLE empregados MODIFY COLUMN telefone VARCHAR(20) COMMENT 'Telefone do funcion√°rio, identificando pa√≠s e regi√£o.';
 
-ALTER TABLE empregados MODIFY COLUMN data_contratacao DATE COMMENT 'Data que o funcion·rio iniciou seus serviÁos na empresa.';
+ALTER TABLE empregados MODIFY COLUMN data_contratacao DATE COMMENT 'Data que o funcion√°rio iniciou seus servi√ßos na empresa.';
 
-ALTER TABLE empregados MODIFY COLUMN id_cargo VARCHAR(10) COMMENT 'Chave estrangeira que especifica o cÛdigo do cargo atual exercido pelo funcion·rio (referente ‡ tabela cargos)';
+ALTER TABLE empregados MODIFY COLUMN id_cargo VARCHAR(10) COMMENT 'Chave estrangeira que especifica o c√≥digo do cargo atual exercido pelo funcion√°rio (referente √† tabela cargos)';
 
-ALTER TABLE empregados MODIFY COLUMN salario DECIMAL(8, 2) COMMENT 'Sal·rio mensal recebido por cada funcion·rio.';
+ALTER TABLE empregados MODIFY COLUMN salario DECIMAL(8, 2) COMMENT 'Sal√°rio mensal recebido por cada funcion√°rio.';
 
-ALTER TABLE empregados MODIFY COLUMN comissao DECIMAL(4, 2) COMMENT 'Comiss„o recebida pelos funcion·rios do departamento de vendas, atravÈs da porcentagem de vendas realizadas por eles.';
+ALTER TABLE empregados MODIFY COLUMN comissao DECIMAL(4, 2) COMMENT 'Comiss√£o recebida pelos funcion√°rios do departamento de vendas, atrav√©s da porcentagem de vendas realizadas por eles.';
 
-ALTER TABLE empregados MODIFY COLUMN id_departamento INTEGER COMMENT 'Chave estrangeira que indica (atravÈs do relacionamento referente ‡ tabela departamentos), a qual departamento pertende cada funcion·rio.';
+ALTER TABLE empregados MODIFY COLUMN id_departamento INTEGER COMMENT 'Chave estrangeira que indica (atrav√©s do relacionamento referente √† tabela departamentos), a qual departamento pertende cada funcion√°rio.';
 
-ALTER TABLE empregados MODIFY COLUMN id_supervisor INTEGER COMMENT 'Chave estrangeira que indica relacionamento dentro da prÛpria tabela empregados, indicando o supervisor de cada funcion·rio (que tambÈm È identificado por um id_funcion·rio e pode ser o gerente do departamento ou n„o).';
+ALTER TABLE empregados MODIFY COLUMN id_supervisor INTEGER COMMENT 'Chave estrangeira que indica relacionamento dentro da pr√≥pria tabela empregados, indicando o supervisor de cada funcion√°rio (que tamb√©m √© identificado por um id_funcion√°rio e pode ser o gerente do departamento ou n√£o).';
 
 
 CREATE UNIQUE INDEX empregados_idx
@@ -147,9 +159,9 @@ CREATE TABLE gerentes (
                 PRIMARY KEY (id_gerente, id_departamento)
 );
 
-ALTER TABLE gerentes MODIFY COLUMN id_gerente INTEGER COMMENT 'Chave prim·ria estrangeira que indica o cÛdigo do funcion·rio (referente ‡ tabela empregados), que se direciona ‡ essa tabela quando possui o cargo de gerente.';
+ALTER TABLE gerentes MODIFY COLUMN id_gerente INTEGER COMMENT 'Chave prim√°ria estrangeira que indica o c√≥digo do funcion√°rio (referente √† tabela empregados), que se direciona √† essa tabela quando possui o cargo de gerente.';
 
-ALTER TABLE gerentes MODIFY COLUMN id_departamento INTEGER COMMENT 'Chave prim·ria estrangeira que indica o cÛdigo do departamento (referente ‡ tabela departamentos) ‡ qual cada gerente pertence.';
+ALTER TABLE gerentes MODIFY COLUMN id_departamento INTEGER COMMENT 'Chave prim√°ria estrangeira que indica o c√≥digo do departamento (referente √† tabela departamentos) √† qual cada gerente pertence.';
 
 
 CREATE TABLE historico_cargos (
@@ -161,15 +173,15 @@ CREATE TABLE historico_cargos (
                 PRIMARY KEY (id_empregado, data_inicial)
 );
 
-ALTER TABLE historico_cargos MODIFY COLUMN id_empregado INTEGER COMMENT 'Chave prim·ria estrangeira que indica o cÛdigo de um determinado funcion·rio (referente ‡ tabela empregados).';
+ALTER TABLE historico_cargos MODIFY COLUMN id_empregado INTEGER COMMENT 'Chave prim√°ria estrangeira que indica o c√≥digo de um determinado funcion√°rio (referente √† tabela empregados).';
 
-ALTER TABLE historico_cargos MODIFY COLUMN data_inicial DATE COMMENT 'Data de Ìnicio de um funcion·rio em determinado cargo. Deve ser menor do que o valor da data_final.';
+ALTER TABLE historico_cargos MODIFY COLUMN data_inicial DATE COMMENT 'Data de √≠nicio de um funcion√°rio em determinado cargo. Deve ser menor do que o valor da data_final.';
 
-ALTER TABLE historico_cargos MODIFY COLUMN data_final DECIMAL COMMENT 'Data do ˙ltimo dia de um funcion·rio em determinado cargo. Deve ser maior do que o valor da data_inicial.';
+ALTER TABLE historico_cargos MODIFY COLUMN data_final DECIMAL COMMENT 'Data do √∫ltimo dia de um funcion√°rio em determinado cargo. Deve ser maior do que o valor da data_inicial.';
 
-ALTER TABLE historico_cargos MODIFY COLUMN id_cargo VARCHAR(10) COMMENT 'Chave estrangeira correspondente ao cÛdigo do cargo (referente ‡ tabela cargos) que o estava sendo exercido.';
+ALTER TABLE historico_cargos MODIFY COLUMN id_cargo VARCHAR(10) COMMENT 'Chave estrangeira correspondente ao c√≥digo do cargo (referente √† tabela cargos) que o estava sendo exercido.';
 
-ALTER TABLE historico_cargos MODIFY COLUMN id_departamento INTEGER COMMENT 'Chave estrangeira correspondente ao cÛdigo do departamento (referente ‡ tabela departamentos) em que aquele funcion·rio estava atuando em tal cargo.';
+ALTER TABLE historico_cargos MODIFY COLUMN id_departamento INTEGER COMMENT 'Chave estrangeira correspondente ao c√≥digo do departamento (referente √† tabela departamentos) em que aquele funcion√°rio estava atuando em tal cargo.';
 
 
 ALTER TABLE empregados ADD CONSTRAINT cargos_empregados_fk
@@ -232,9 +244,7 @@ REFERENCES empregados (id_empregado)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION;
 
-/*
-Warning: MySQL does not support this relationship's deferrability policy (INITIALLY_DEFERRED).
-*/
+
 ALTER TABLE gerentes ADD CONSTRAINT empregados_gerentes_fk
 FOREIGN KEY (id_gerente)
 REFERENCES empregados (id_empregado)
