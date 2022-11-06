@@ -1,3 +1,28 @@
+CREATE USER analaura WITH
+	SUPERUSER
+	CREATEDB
+	CREATEROLE
+	INHERIT
+	REPLICATION
+	BYPASSRLS
+	ENCRYPTED PASSWORD 'computacao@raiz'
+;
+
+CREATE DATABASE uvv
+	WITH OWNER = analaura
+	TEMPLATE = template0
+	ENCODING = 'UTF8'
+	LC_COLLATE = 'pt_BR.UTF-8'
+	LC_CTYPE = 'pt_BR.UTF-8'
+	ALLOW_CONNECTIONS = true
+;
+
+\c uvv analaura;
+
+CREATE SCHEMA IF NOT EXISTS hr AUTHORIZATION analaura;
+
+ALTER USER analaura
+SET SEARCH_PATH TO hr, analaura, public;
 
 CREATE TABLE cargos (
                 id_cargo VARCHAR(10) NOT NULL,
@@ -6,10 +31,10 @@ CREATE TABLE cargos (
                 salario_maximo NUMERIC(8,2),
                 CONSTRAINT id_cargo PRIMARY KEY (id_cargo)
 );
-COMMENT ON COLUMN cargos.id_cargo IS 'Chave prim·ria que indica o cÛdigo de um determinado cargo.';
+COMMENT ON COLUMN cargos.id_cargo IS 'Chave prim√°ria que indica o c√≥digo de um determinado cargo.';
 COMMENT ON COLUMN cargos.cargo IS 'Nome do cargo.';
-COMMENT ON COLUMN cargos.salario_minimo IS 'Sal·rio mÌnimo mensal que um funcion·rio em determinado cargo recebe.';
-COMMENT ON COLUMN cargos.salario_maximo IS 'Sal·rio m·ximo mensal que um funcion·rio em determinado cargo recebe.';
+COMMENT ON COLUMN cargos.salario_minimo IS 'Sal√°rio m√≠nimo mensal que um funcion√°rio em determinado cargo recebe.';
+COMMENT ON COLUMN cargos.salario_maximo IS 'Sal√°rio m√°ximo mensal que um funcion√°rio em determinado cargo recebe.';
 
 
 CREATE UNIQUE INDEX cargos_idx
@@ -22,8 +47,8 @@ CREATE TABLE regioes (
                 CONSTRAINT id_regiao PRIMARY KEY (id_regiao)
 );
 COMMENT ON TABLE regioes IS 'tabela1';
-COMMENT ON COLUMN regioes.id_regiao IS 'Chave prim·ria que indica o cÛdigo da regi„o onde se encontra determinada facilidade da empresa.';
-COMMENT ON COLUMN regioes.nome IS 'Nome da regi„o.';
+COMMENT ON COLUMN regioes.id_regiao IS 'Chave prim√°ria que indica o c√≥digo da regi√£o onde se encontra determinada facilidade da empresa.';
+COMMENT ON COLUMN regioes.nome IS 'Nome da regi√£o.';
 
 
 CREATE UNIQUE INDEX regioes_idx
@@ -36,9 +61,9 @@ CREATE TABLE paises (
                 id_regiao INTEGER NOT NULL,
                 CONSTRAINT id_pais PRIMARY KEY (id_pais)
 );
-COMMENT ON COLUMN paises.id_pais IS 'Chave prim·ria que indica o cÛdigo do paÌs onde se encontra determinada facilidade da empresa.';
-COMMENT ON COLUMN paises.nome IS 'Nome do paÌs.';
-COMMENT ON COLUMN paises.id_regiao IS 'Chave estrangeira que indica o cÛdigo da regi„o (referente ‡ tabela regiıes) onde se encontra determinada facilidade da empresa.';
+COMMENT ON COLUMN paises.id_pais IS 'Chave prim√°ria que indica o c√≥digo do pa√≠s onde se encontra determinada facilidade da empresa.';
+COMMENT ON COLUMN paises.nome IS 'Nome do pa√≠s.';
+COMMENT ON COLUMN paises.id_regiao IS 'Chave estrangeira que indica o c√≥digo da regi√£o (referente √† tabela regi√µes) onde se encontra determinada facilidade da empresa.';
 
 
 CREATE UNIQUE INDEX paises_idx
@@ -54,12 +79,12 @@ CREATE TABLE localizacoes (
                 id_pais CHAR(2) NOT NULL,
                 CONSTRAINT id_localizacao PRIMARY KEY (id_localizacao)
 );
-COMMENT ON COLUMN localizacoes.id_localizacao IS 'Chave prim·ria que indica o cÛdigo de uma localizaÁ„o onde existe um departamento da empresa.';
-COMMENT ON COLUMN localizacoes.endereco IS 'EndereÁo (logradouro, n˙mero) de determinada localizaÁ„o da empresa.';
-COMMENT ON COLUMN localizacoes.cep IS 'CEP referente ‡ determinada localizaÁ„o da empresa.';
+COMMENT ON COLUMN localizacoes.id_localizacao IS 'Chave prim√°ria que indica o c√≥digo de uma localiza√ß√£o onde existe um departamento da empresa.';
+COMMENT ON COLUMN localizacoes.endereco IS 'Endere√ßo (logradouro, n√∫mero) de determinada localiza√ß√£o da empresa.';
+COMMENT ON COLUMN localizacoes.cep IS 'CEP referente √† determinada localiza√ß√£o da empresa.';
 COMMENT ON COLUMN localizacoes.cidade IS 'Cidade onde se encontra determinada facilidade da empresa.';
 COMMENT ON COLUMN localizacoes.uf IS 'Cidade onde se encontra determinada facilidade da empresa.';
-COMMENT ON COLUMN localizacoes.id_pais IS 'Chave estrangeira que indica o cÛdigo do paÌs (referente ‡ tabela paÌses) onde se encontra determinada facilidade da empresa.';
+COMMENT ON COLUMN localizacoes.id_pais IS 'Chave estrangeira que indica o c√≥digo do pa√≠s (referente √† tabela pa√≠ses) onde se encontra determinada facilidade da empresa.';
 
 
 CREATE TABLE departamentos (
@@ -68,9 +93,9 @@ CREATE TABLE departamentos (
                 id_localizacao INTEGER NOT NULL,
                 CONSTRAINT id_departamento PRIMARY KEY (id_departamento)
 );
-COMMENT ON COLUMN departamentos.id_departamento IS 'Chave prim·ria que indica o cÛdigo de um departamento.';
+COMMENT ON COLUMN departamentos.id_departamento IS 'Chave prim√°ria que indica o c√≥digo de um departamento.';
 COMMENT ON COLUMN departamentos.nome IS 'Nome do departamento.';
-COMMENT ON COLUMN departamentos.id_localizacao IS 'Chave estrangeira para a tabela localizaÁıes, que especifÌca em qual local fica determinado departamento.';
+COMMENT ON COLUMN departamentos.id_localizacao IS 'Chave estrangeira para a tabela localiza√ß√µes, que especif√≠ca em qual local fica determinado departamento.';
 
 
 CREATE UNIQUE INDEX departamentos_idx
@@ -90,17 +115,17 @@ CREATE TABLE empregados (
                 id_supervisor INTEGER,
                 CONSTRAINT id_empregado PRIMARY KEY (id_empregado)
 );
-COMMENT ON TABLE empregados IS 'Tabela que lista os funcion·rios da empresa e suas informaÁıes.';
-COMMENT ON COLUMN empregados.id_empregado IS 'Chave prim·ria que indica o cÛdigo ˙nico de cadastro do funcion·rio (chave prim·ria da tabela empregados).';
-COMMENT ON COLUMN empregados.nome IS 'Nome completo do funcion·rio.';
-COMMENT ON COLUMN empregados.email IS 'EndereÁo de e-mail dos funcion·rios (antes do @)';
-COMMENT ON COLUMN empregados.telefone IS 'Telefone do funcion·rio, identificando paÌs e regi„o.';
-COMMENT ON COLUMN empregados.data_contratacao IS 'Data que o funcion·rio iniciou seus serviÁos na empresa.';
-COMMENT ON COLUMN empregados.id_cargo IS 'Chave estrangeira que especifica o cÛdigo do cargo atual exercido pelo funcion·rio (referente ‡ tabela cargos)';
-COMMENT ON COLUMN empregados.salario IS 'Sal·rio mensal recebido por cada funcion·rio.';
-COMMENT ON COLUMN empregados.comissao IS 'Comiss„o recebida pelos funcion·rios do departamento de vendas, atravÈs da porcentagem de vendas realizadas por eles.';
-COMMENT ON COLUMN empregados.id_departamento IS 'Chave estrangeira que indica (atravÈs do relacionamento referente ‡ tabela departamentos), a qual departamento pertende cada funcion·rio.';
-COMMENT ON COLUMN empregados.id_supervisor IS 'Chave estrangeira que indica relacionamento dentro da prÛpria tabela empregados, indicando o supervisor de cada funcion·rio (que tambÈm È identificado por um id_funcion·rio e pode ser o gerente do departamento ou n„o).';
+COMMENT ON TABLE empregados IS 'Tabela que lista os funcion√°rios da empresa e suas informa√ß√µes.';
+COMMENT ON COLUMN empregados.id_empregado IS 'Chave prim√°ria que indica o c√≥digo √∫nico de cadastro do funcion√°rio (chave prim√°ria da tabela empregados).';
+COMMENT ON COLUMN empregados.nome IS 'Nome completo do funcion√°rio.';
+COMMENT ON COLUMN empregados.email IS 'Endere√ßo de e-mail dos funcion√°rios (antes do @)';
+COMMENT ON COLUMN empregados.telefone IS 'Telefone do funcion√°rio, identificando pa√≠s e regi√£o.';
+COMMENT ON COLUMN empregados.data_contratacao IS 'Data que o funcion√°rio iniciou seus servi√ßos na empresa.';
+COMMENT ON COLUMN empregados.id_cargo IS 'Chave estrangeira que especifica o c√≥digo do cargo atual exercido pelo funcion√°rio (referente √† tabela cargos)';
+COMMENT ON COLUMN empregados.salario IS 'Sal√°rio mensal recebido por cada funcion√°rio.';
+COMMENT ON COLUMN empregados.comissao IS 'Comiss√£o recebida pelos funcion√°rios do departamento de vendas, atrav√©s da porcentagem de vendas realizadas por eles.';
+COMMENT ON COLUMN empregados.id_departamento IS 'Chave estrangeira que indica (atrav√©s do relacionamento referente √† tabela departamentos), a qual departamento pertende cada funcion√°rio.';
+COMMENT ON COLUMN empregados.id_supervisor IS 'Chave estrangeira que indica relacionamento dentro da pr√≥pria tabela empregados, indicando o supervisor de cada funcion√°rio (que tamb√©m √© identificado por um id_funcion√°rio e pode ser o gerente do departamento ou n√£o).';
 
 
 CREATE UNIQUE INDEX empregados_idx
@@ -116,8 +141,8 @@ CREATE TABLE gerentes (
                 id_departamento INTEGER NOT NULL,
                 CONSTRAINT id_gerentes PRIMARY KEY (id_gerente, id_departamento)
 );
-COMMENT ON COLUMN gerentes.id_gerente IS 'Chave prim·ria estrangeira que indica o cÛdigo do funcion·rio (referente ‡ tabela empregados), que se direciona ‡ essa tabela quando possui o cargo de gerente.';
-COMMENT ON COLUMN gerentes.id_departamento IS 'Chave prim·ria estrangeira que indica o cÛdigo do departamento (referente ‡ tabela departamentos) ‡ qual cada gerente pertence.';
+COMMENT ON COLUMN gerentes.id_gerente IS 'Chave prim√°ria estrangeira que indica o c√≥digo do funcion√°rio (referente √† tabela empregados), que se direciona √† essa tabela quando possui o cargo de gerente.';
+COMMENT ON COLUMN gerentes.id_departamento IS 'Chave prim√°ria estrangeira que indica o c√≥digo do departamento (referente √† tabela departamentos) √† qual cada gerente pertence.';
 
 
 CREATE TABLE historico_cargos (
@@ -128,11 +153,11 @@ CREATE TABLE historico_cargos (
                 id_departamento INTEGER NOT NULL,
                 CONSTRAINT data_inicial PRIMARY KEY (id_empregado, data_inicial)
 );
-COMMENT ON COLUMN historico_cargos.id_empregado IS 'Chave prim·ria estrangeira que indica o cÛdigo de um determinado funcion·rio (referente ‡ tabela empregados).';
-COMMENT ON COLUMN historico_cargos.data_inicial IS 'Data de Ìnicio de um funcion·rio em determinado cargo. Deve ser menor do que o valor da data_final.';
-COMMENT ON COLUMN historico_cargos.data_final IS 'Data do ˙ltimo dia de um funcion·rio em determinado cargo. Deve ser maior do que o valor da data_inicial.';
-COMMENT ON COLUMN historico_cargos.id_cargo IS 'Chave estrangeira correspondente ao cÛdigo do cargo (referente ‡ tabela cargos) que o estava sendo exercido.';
-COMMENT ON COLUMN historico_cargos.id_departamento IS 'Chave estrangeira correspondente ao cÛdigo do departamento (referente ‡ tabela departamentos) em que aquele funcion·rio estava atuando em tal cargo.';
+COMMENT ON COLUMN historico_cargos.id_empregado IS 'Chave prim√°ria estrangeira que indica o c√≥digo de um determinado funcion√°rio (referente √† tabela empregados).';
+COMMENT ON COLUMN historico_cargos.data_inicial IS 'Data de √≠nicio de um funcion√°rio em determinado cargo. Deve ser menor do que o valor da data_final.';
+COMMENT ON COLUMN historico_cargos.data_final IS 'Data do √∫ltimo dia de um funcion√°rio em determinado cargo. Deve ser maior do que o valor da data_inicial.';
+COMMENT ON COLUMN historico_cargos.id_cargo IS 'Chave estrangeira correspondente ao c√≥digo do cargo (referente √† tabela cargos) que o estava sendo exercido.';
+COMMENT ON COLUMN historico_cargos.id_departamento IS 'Chave estrangeira correspondente ao c√≥digo do departamento (referente √† tabela departamentos) em que aquele funcion√°rio estava atuando em tal cargo.';
 
 
 ALTER TABLE empregados ADD CONSTRAINT cargos_empregados_fk
