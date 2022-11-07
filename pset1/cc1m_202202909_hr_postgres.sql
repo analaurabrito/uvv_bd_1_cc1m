@@ -18,6 +18,7 @@ CREATE DATABASE uvv
 ;
 
 \c uvv analaura;
+computacao@raiz
 
 CREATE SCHEMA IF NOT EXISTS hr AUTHORIZATION analaura;
 
