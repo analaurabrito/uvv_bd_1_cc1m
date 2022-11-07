@@ -652,9 +652,9 @@ INSERT INTO empregados (id_empregado, nome, email, telefone, data_contratacao, i
 
 INSERT INTO empregados (id_empregado, nome, email, telefone, data_contratacao, id_cargo, salario, comissao, id_supervisor, id_departamento) VALUES (206, 'William Gietz', 'WGIETZ', '515.123.8181', '2002-06-07', 'AC_ACCOUNT', 8300, null, 205, 110);
 
-INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('1995-09-17', 'yyyy-mm-dd', 200, TO_DATE('2001-06-17', 'yyyy-mm-dd'), 'AD_ASST',90);
+INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, '1995-09-17', 200, TO_DATE('2001-06-17', 'yyyy-mm-dd'), 'AD_ASST',90);
 														       
-INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('1997-09-21', 'yyyy-mm-dd', 101, TO_DATE('2001-10-27', 'yyyy-mm-dd'), 'AC_ACCOUNT',110);
+INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100,'1997-09-21', 'yyyy-mm-dd', 101, TO_DATE('2001-10-27', 'yyyy-mm-dd'), 'AC_ACCOUNT',110);
 														       
 INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('2001-01-13', 'yyyy-mm-dd', 102, TO_DATE('2006-07-24', 'yyyy-mm-dd'), 'IT_PROG',60);
 														       
