@@ -117,7 +117,7 @@ CREATE TABLE empregados (
                 data_contratacao DATE NOT NULL,
                 id_cargo VARCHAR(10) NOT NULL,
                 salario NUMERIC(8,2),
-                comissao NUMERIC(4,2) NOT NULL,
+                comissao NUMERIC(4,2),
                 id_departamento INTEGER,
                 id_supervisor INTEGER,
                 CONSTRAINT id_empregado PRIMARY KEY (id_empregado)
@@ -155,7 +155,7 @@ COMMENT ON COLUMN gerentes.id_departamento IS 'Chave primária estrangeira que i
 CREATE TABLE historico_cargos (
                 id_empregado INTEGER NOT NULL,
                 data_inicial DATE NOT NULL,
-                data_final NUMERIC,
+                data_final DATE,
                 id_cargo VARCHAR(10) NOT NULL,
                 id_departamento INTEGER NOT NULL,
                 CONSTRAINT data_inicial PRIMARY KEY (id_empregado, data_inicial)
@@ -652,22 +652,22 @@ INSERT INTO empregados (id_empregado, nome, email, telefone, data_contratacao, i
 
 INSERT INTO empregados (id_empregado, nome, email, telefone, data_contratacao, id_cargo, salario, comissao, id_supervisor, id_departamento) VALUES (206, 'William Gietz', 'WGIETZ', '515.123.8181', '2002-06-07', 'AC_ACCOUNT', 8300, null, 205, 110);
 
-INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, '1995-09-17', 200, TO_DATE('2001-06-17', 'yyyy-mm-dd'), 'AD_ASST',90);
+INSERT INTO historico_cargos (id_empregado, data_inicial, data_final, id_cargo, id_departamento) VALUES (200, '1995-09-17', '2001-06-17', 'AD_ASST',90);
 														       
-INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100,'1997-09-21', 'yyyy-mm-dd', 101, TO_DATE('2001-10-27', 'yyyy-mm-dd'), 'AC_ACCOUNT',110);
+INSERT INTO historico_cargos (id_empregado, data_inicial, data_final, id_cargo, id_departamento) VALUES (101, '1997-09-21', '2001-10-27', 'AC_ACCOUNT',110);
 														       
-INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('2001-01-13', 'yyyy-mm-dd', 102, TO_DATE('2006-07-24', 'yyyy-mm-dd'), 'IT_PROG',60);
+INSERT INTO historico_cargos (id_empregado, data_inicial, data_final, id_cargo, id_departamento) VALUES (102, '2001-01-13', '2006-07-24', 'IT_PROG',60);
 														       
-INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('2001-10-28', 'yyyy-mm-dd', 101, TO_DATE('2005-03-15', 'yyyy-mm-dd'), 'AC_MGR',110);
+INSERT INTO historico_cargos (id_empregado, data_inicial, data_final, id_cargo, id_departamento) VALUES (101, '2001-10-28', '2005-03-15', 'AC_MGR',110);
 														       
-INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('2002-07-01', 'yyyy-mm-dd', 200, TO_DATE('2006-12-31', 'yyyy-mm-dd'), 'AC_ACCOUNT',90);
+INSERT INTO historico_cargos (id_empregado, data_inicial, data_final, id_cargo, id_departamento) VALUES (200, '2002-07-01', '2006-12-31', 'AC_ACCOUNT',90);
 														       
-INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('2004-02-17', 'yyyy-mm-dd', 201, TO_DATE('2007-12-19', 'yyyy-mm-dd'), 'MK_REP',20);
+INSERT INTO historico_cargos (id_empregado, data_inicial, data_final, id_cargo, id_departamento) VALUES (201, '2004-02-17', '2007-12-19', 'MK_REP',20);
 														       
-INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('2006-03-24', 'yyyy-mm-dd', 114, TO_DATE('2007-12-31', 'yyyy-mm-dd'), 'ST_CLERK',50);
+INSERT INTO historico_cargos (id_empregado, data_inicial, data_final, id_cargo, id_departamento) VALUES (114, '2006-03-24', '2007-12-31', 'ST_CLERK',50);
 														       
-INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('2006-03-24', 'yyyy-mm-dd', 176, TO_DATE('2006-12-31', 'yyyy-mm-dd'), 'SA_REP',80);
+INSERT INTO historico_cargos (id_empregado, data_inicial, data_final, id_cargo, id_departamento) VALUES (176, '2006-03-24', '2006-12-31', 'SA_REP',80);
 														       
-INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('2007-01-01', 'yyyy-mm-dd', 176, TO_DATE('2007-12-31', 'yyyy-mm-dd'), 'SA_MAN',80);
+INSERT INTO historico_cargos (id_empregado, data_inicial, data_final, id_cargo, id_departamento) VALUES (176, '2007-01-01', '2007-12-31', 'SA_MAN',80);
 														       
-INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('2007-01-01', 'yyyy-mm-dd', 122, TO_DATE('2007-12-31', 'yyyy-mm-dd'), 'ST_CLERK',50);
+INSERT INTO historico_cargos (id_empregado, data_inicial, data_final, id_cargo, id_departamento) VALUES (122, '2007-01-01', '2007-12-31', 'ST_CLERK',50);
