@@ -116,7 +116,7 @@ CREATE TABLE empregados (
                 data_contratacao DATE NOT NULL,
                 id_cargo VARCHAR(10) NOT NULL,
                 salario DECIMAL(8,2),
-                comissao DECIMAL(4,2) NOT NULL,
+                comissao DECIMAL(4,2),
                 id_departamento INT,
                 id_supervisor INT,
                 PRIMARY KEY (id_empregado)
@@ -167,7 +167,7 @@ ALTER TABLE gerentes MODIFY COLUMN id_departamento INTEGER COMMENT 'Chave primá
 CREATE TABLE historico_cargos (
                 id_empregado INT NOT NULL,
                 data_inicial DATE NOT NULL,
-                data_final DECIMAL,
+                data_final DATE,
                 id_cargo VARCHAR(10) NOT NULL,
                 id_departamento INT NOT NULL,
                 PRIMARY KEY (id_empregado, data_inicial)
