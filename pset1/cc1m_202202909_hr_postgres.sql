@@ -17,10 +17,10 @@ CREATE DATABASE uvv
 	ALLOW_CONNECTIONS = true
 ;
 
+CREATE SCHEMA IF NOT EXISTS hr AUTHORIZATION analaura;
+
 \c uvv analaura;
 computacao@raiz
-
-CREATE SCHEMA IF NOT EXISTS hr AUTHORIZATION analaura;
 
 ALTER USER analaura
 SET SEARCH_PATH TO hr, analaura, public;
