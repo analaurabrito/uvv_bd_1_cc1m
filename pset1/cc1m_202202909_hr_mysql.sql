@@ -149,10 +149,6 @@ CREATE UNIQUE INDEX empregados_idx
  ON empregados
  ( email );
 
-CREATE UNIQUE INDEX empregados_idx1
- ON empregados
- ( email );
-
 CREATE TABLE gerentes (
                 id_gerente INT NOT NULL,
                 id_departamento INT NOT NULL,
