@@ -346,6 +346,98 @@ INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VA
 
 INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (3200,'Mariano Escobedo 9991', '11932','Mexico City','Distrito Federal,','MX');
 
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (10,'Administration',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (20,'Marketing',1800);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (30,'Purchasing',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (40,'Human Resources',2400);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (50,'Shipping',1500);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (60,'IT',1400);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (70,'Public Relations',2700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (80,'Sales',2500);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (90,'Executive',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (100,'Finance',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (110,'Accounting',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (120,'Treasury',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (130,'Corporate Tax',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (140,'Control And Credit',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (150,'Shareholder Services',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (160,'Benefits',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (170,'Manufacturing',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (180,'Construction',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (190,'Contracting',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (200,'Operations',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (210,'IT Support',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (220,'NOC',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (230,'IT Helpdesk',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (240,'Government Sales',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (250,'Retail Sales',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (260,'Recruiting',1700);
+
+INSERT INTO departamentos (id_departamento, nome, id_localizacao) VALUES (270,'Payroll',1700);
+
+INSERT INTO cargos (id_cargo, cargo, salario_minimo, salario_maximo) VALUES ('AD_PRES','President',20080,40000);
+
+INSERT INTO cargos (id_cargo, cargo, salario_minimo, salario_maximo) VALUES ('AD_VP','Administration Vice President',15000,30000);
+
+INSERT INTO cargos (id_cargo, cargo, salario_minimo, salario_maximo) VALUES ('AD_ASST','Administration Assistant',3000,6000);
+
+INSERT INTO cargos (id_cargo, cargo, salario_minimo, salario_maximo) VALUES ('FI_MGR','Finance Manager',8200,16000);
+
+INSERT INTO cargos (id_cargo, cargo, salario_minimo, salario_maximo) VALUES ('FI_ACCOUNT','Accountant',4200,9000);
+
+INSERT INTO cargos (id_cargo, cargo, salario_minimo, salario_maximo) VALUES ('AC_MGR','Accounting Manager',8200,16000);
+
+INSERT INTO cargos (id_cargo, cargo, salario_minimo, salario_maximo) VALUES ('AC_ACCOUNT','Public Accountant',4200,9000);
+
+INSERT INTO cargos (id_cargo, cargo, salario_minimo, salario_maximo) VALUES ('SA_MAN','Sales Manager',10000,20080);
+
+INSERT INTO cargos (id_cargo, cargo, salario_minimo, salario_maximo) VALUES ('SA_REP','Sales Representative',6000,12008);
+
+INSERT INTO cargos (id_cargo, cargo, salario_minimo, salario_maximo) VALUES ('PU_MAN','Purchasing Manager',8000,15000);
+
+INSERT INTO cargos (id_cargo, cargo, salario_minimo, salario_maximo) VALUES ('PU_CLERK','Purchasing Clerk',2500,5500);
+
+INSERT INTO cargos (id_cargo, cargo, salario_minimo, salario_maximo) VALUES ('ST_MAN','Stock Manager',5500,8500);
+
+INSERT INTO cargos (id_cargo, cargo, salario_minimo, salario_maximo) VALUES ('ST_CLERK','Stock Clerk',2008,5000);
+
+INSERT INTO cargos (id_cargo, cargo, salario_minimo, salario_maximo) VALUES ('SH_CLERK','Shipping Clerk',2500,5500);
+
+INSERT INTO cargos (id_cargo, cargo, salario_minimo, salario_maximo) VALUES ('IT_PROG','Programmer',4000,10000);
+
+INSERT INTO cargos (id_cargo, cargo, salario_minimo, salario_maximo) VALUES ('MK_MAN','Marketing Manager',9000,15000);
+
+INSERT INTO cargos (id_cargo, cargo, salario_minimo, salario_maximo) VALUES ('MK_REP','Marketing Representative',4000,9000);
+
+INSERT INTO cargos (id_cargo, cargo, salario_minimo, salario_maximo) VALUES ('HR_REP','Human Resources Representative',4000,9000);
+
+INSERT INTO cargos (id_cargo, cargo, salario_minimo, salario_maximo) VALUES ('PR_REP','Public Relations Representative',4500,10500);
+
 INSERT INTO empregados (id_empregado, nome, email, telefone, data_contratacao, id_cargo, salario, comissao, id_supervisor, id_departamento) VALUES (100, 'Steven King', 'SKING', '515.123.4567', '2003-06-17', 'AD_PRES', 24000, null, null, 90);
 
 INSERT INTO empregados (id_empregado, nome, email, telefone, data_contratacao, id_cargo, salario, comissao, id_supervisor, id_departamento) VALUES (101, 'Neena Kochhar', 'NKOCHHAR', '515.123.4568', '2005-09-21', 'AD_VP', 17000, null, 100, 90);
@@ -559,3 +651,23 @@ INSERT INTO empregados (id_empregado, nome, email, telefone, data_contratacao, i
 INSERT INTO empregados (id_empregado, nome, email, telefone, data_contratacao, id_cargo, salario, comissao, id_supervisor, id_departamento) VALUES (205, 'Shelley Higgins', 'SHIGGINS', '515.123.8080', '2002-06-07', 'AC_MGR', 12008, null, 101, 110);
 
 INSERT INTO empregados (id_empregado, nome, email, telefone, data_contratacao, id_cargo, salario, comissao, id_supervisor, id_departamento) VALUES (206, 'William Gietz', 'WGIETZ', '515.123.8181', '2002-06-07', 'AC_ACCOUNT', 8300, null, 205, 110);
+
+INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('1995-09-17', 'yyyy-mm-dd', 200, TO_DATE('2001-06-17', 'yyyy-mm-dd'), 'AD_ASST',90);
+														       
+INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('1997-09-21', 'yyyy-mm-dd', 101, TO_DATE('2001-10-27', 'yyyy-mm-dd'), 'AC_ACCOUNT',110);
+														       
+INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('2001-01-13', 'yyyy-mm-dd', 102, TO_DATE('2006-07-24', 'yyyy-mm-dd'), 'IT_PROG',60);
+														       
+INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('2001-10-28', 'yyyy-mm-dd', 101, TO_DATE('2005-03-15', 'yyyy-mm-dd'), 'AC_MGR',110);
+														       
+INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('2002-07-01', 'yyyy-mm-dd', 200, TO_DATE('2006-12-31', 'yyyy-mm-dd'), 'AC_ACCOUNT',90);
+														       
+INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('2004-02-17', 'yyyy-mm-dd', 201, TO_DATE('2007-12-19', 'yyyy-mm-dd'), 'MK_REP',20);
+														       
+INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('2006-03-24', 'yyyy-mm-dd', 114, TO_DATE('2007-12-31', 'yyyy-mm-dd'), 'ST_CLERK',50);
+														       
+INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('2006-03-24', 'yyyy-mm-dd', 176, TO_DATE('2006-12-31', 'yyyy-mm-dd'), 'SA_REP',80);
+														       
+INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('2007-01-01', 'yyyy-mm-dd', 176, TO_DATE('2007-12-31', 'yyyy-mm-dd'), 'SA_MAN',80);
+														       
+INSERT INTO historico_cargos (id_historico, data_inicial, id_empregado, data_final, id_cargo, id_departamento) VALUES (100, TO_DATE('2007-01-01', 'yyyy-mm-dd', 122, TO_DATE('2007-12-31', 'yyyy-mm-dd'), 'ST_CLERK',50);
