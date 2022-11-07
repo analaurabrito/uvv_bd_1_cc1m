@@ -244,6 +244,108 @@ ON DELETE NO ACTION
 ON UPDATE NO ACTION
 DEFERRABLE INITIALLY DEFERRED;
 
+INSERT INTO regioes (id_regiao, nome) VALUES (1, 'Europe');
+
+INSERT INTO regioes (id_regiao, nome) VALUES (2, 'Americas');
+
+INSERT INTO regioes (id_regiao, nome) VALUES (3, 'Asia');
+
+INSERT INTO regioes (id_regiao, nome) VALUES (4, 'Middle East and Africa');
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('AR', 'Argentina', 2);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('AU', 'Australia', 3);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('BE', 'Belgium', 1);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('BR', 'Brazil', 2);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('CA', 'Canada', 2);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('CH', 'Switzerland', 1);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('CN', 'China', 3);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('DE', 'Germany', 1);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('DK', 'Denmark', 1);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('EG', 'Egypt', 4);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('FR', 'France', 1);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('IL', 'Israel', 4);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('IN', 'India', 3);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('IT', 'Italy', 1);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('JP', 'Japan', 3);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('KW', 'Kuwait', 4);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('ML', 'Malaysia', 3);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('MX', 'Mexico', 2);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('NG', 'Nigeria', 4);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('NL', 'Netherlands', 1);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('SG', 'Singapore', 3);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('UK', 'United Kingdom', 1);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('US', 'United States of America', 2);
+
+INSERT INTO paises (id_pais, nome, id_regiao) VALUES ('ZM', 'Zambia', 4);
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (1000,'1297 Via Cola di Rie', '00989','Roma','null','IT');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (1100,'93091 Calle della Testa', '10934','Venice','null','IT');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (1200,'2017 Shinjuku-ku', '1689','Tokyo','Tokyo Prefecture','JP');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (1300,'9450 Kamiya-cho', '6823','Hiroshima','null','JP');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (1400,'2014 Jabberwocky Rd', '26192','Southlake','Texas','US');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (1500,'2011 Interiors Blvd', '99236','South San Francisco','California','US');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (1600,'2007 Zagora St', '50090','South Brunswick','New Jersey','US');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (1700,'2004 Charade Rd', '98199','Seattle','Washington','US');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (1800,'147 Spadina Ave', 'M5V 2L7','Toronto','Ontario','CA');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (1900,'6092 Boxwood St', 'YSW 9T2','Whitehorse','Yukon','CA');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (2000,'40-5-12 Laogianggen', '190518','Beijing','null','CN');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (2100,'1298 Vileparle (E)', '490231','Bombay','Maharashtra','IN');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (2200,'12-98 Victoria Street', '2901','Sydney','New South Wales','AU');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (2300,'198 Clementi North', '540198','Singapore','null','SG');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (2400,'8204 Arthur St', 'null','London','null','UK');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (2500,'Magdalen Centre, The Oxford Science Park', 'OX9 9ZB','Oxford','Oxford','UK');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (2600,'9702 Chester Road', '09629850293','Stretford','Manchester','UK');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (2700,'Schwanthalerstr. 7031', '80925','Munich','Bavaria','DE');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (2800,'Rua Frei Caneca 1360 ', '01307-002','Sao Paulo','Sao Paulo','BR');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (2900,'20 Rue des Corps-Saints', '1730','Geneva','Geneve','CH');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (3000,'Murtenstrasse 921', '3095','Bern','BE','CH');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (3100,'Pieter Breughelstraat 837', '3029SK','Utrecht','Utrecht','NL');
+
+INSERT INTO localizacoes (id_localizacao, endereco, cep, cidade, uf, id_pais) VALUES (3200,'Mariano Escobedo 9991', '11932','Mexico City','Distrito Federal,','MX');
+
 INSERT INTO empregados (id_empregado, nome, email, telefone, data_contratacao, id_cargo, salario, comissao, id_supervisor, id_departamento) VALUES (100, 'Steven King', 'SKING', '515.123.4567', '2003-06-17', 'AD_PRES', 24000, null, null, 90);
 
 INSERT INTO empregados (id_empregado, nome, email, telefone, data_contratacao, id_cargo, salario, comissao, id_supervisor, id_departamento) VALUES (101, 'Neena Kochhar', 'NKOCHHAR', '515.123.4568', '2005-09-21', 'AD_VP', 17000, null, 100, 90);
