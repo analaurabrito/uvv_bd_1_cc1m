@@ -14,16 +14,22 @@ CREATE DATABASE uvv
 	ENCODING = 'UTF8'
 	LC_COLLATE = 'pt_BR.UTF-8'
 	LC_CTYPE = 'pt_BR.UTF-8'
-	ALLOW_CONNECTIONS = true
+	ALLOW_CONNECTIONS
 ;
-
-CREATE SCHEMA IF NOT EXISTS hr AUTHORIZATION analaura;
 
 \c uvv analaura;
 computacao@raiz
 
+CREATE SCHEMA IF NOT EXISTS hr AUTHORIZATION analaura;
+
+SET SEARCH_PATH TO hr, "analaura", public;
+
+SHOW SEARCH_PATH;
+
 ALTER USER analaura
 SET SEARCH_PATH TO hr, analaura, public;
+
+SHOW SEARCH_PATH;
 
 CREATE TABLE cargos (
                 id_cargo VARCHAR(10) NOT NULL,
