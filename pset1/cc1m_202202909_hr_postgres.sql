@@ -667,3 +667,31 @@ INSERT INTO historico_cargos (id_empregado, data_inicial, data_final, id_cargo, 
 INSERT INTO historico_cargos (id_empregado, data_inicial, data_final, id_cargo, id_departamento) VALUES (176, '2007-01-01', '2007-12-31', 'SA_MAN',80);
 														       
 INSERT INTO historico_cargos (id_empregado, data_inicial, data_final, id_cargo, id_departamento) VALUES (122, '2007-01-01', '2007-12-31', 'ST_CLERK',50);
+
+INSERT INTO gerente (id_gerente, id_departamento) VALUES (108, 100);
+							  
+INSERT INTO gerente (id_gerente, id_departamento) VALUES (114, 30);
+
+INSERT INTO gerente (id_gerente, id_departamento) VALUES (120, 50);
+
+INSERT INTO gerente (id_gerente, id_departamento) VALUES (121, 50);
+
+INSERT INTO gerente (id_gerente, id_departamento) VALUES (122, 50);
+
+INSERT INTO gerente (id_gerente, id_departamento) VALUES (123, 50);
+
+INSERT INTO gerente (id_gerente, id_departamento) VALUES (124, 50);
+
+INSERT INTO gerente (id_gerente, id_departamento) VALUES (145, 80);
+
+INSERT INTO gerente (id_gerente, id_departamento) VALUES (146, 80);
+
+INSERT INTO gerente (id_gerente, id_departamento) VALUES (147, 80);
+
+INSERT INTO gerente (id_gerente, id_departamento) VALUES (148, 80);
+
+INSERT INTO gerente (id_gerente, id_departamento) VALUES (149, 80);
+
+INSERT INTO gerente (id_gerente, id_departamento) VALUES (201, 20);
+
+INSERT INTO gerente (id_gerente, id_departamento) VALUES (205, 110);
