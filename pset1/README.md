@@ -1,8 +1,5 @@
 
-# PSet1
-###### Descrição dos processos da atividade
-
-****
+# Descrição dos processos: *PSet1*
 
 **Aluna:** Ana Laura Brito Oliveira </br>
 **Turma:** CC1M </br>
@@ -11,15 +8,16 @@
 ###### Contribuição de: [Raquel Rigoni](https://github.com/raqs-bot) e [Anna Maria Lima](https://github.com/Annmochii)
 
 ****
+</br>
 
-## ***Modelo no Power Architect***
+## Modelo no Power Architect
 > [cc1m_202202909_hr.arquitect](https://github.com/aurahtml/uvv_bd_1_cc1m/blob/main/pset1/cc1m_202202909_hr.architect)
 <p>Modelo do Projeto Conceitual desenvolvido na aplicação Power Arquitect. Esse modelo segue a proposta de banco de dados a ser recriada através desse trabalho, com adição de alterações influenciadas pelos questionamentos e os conhecimentos gerados pelo Problem-Setting.</p>
 
-## ***Script para PostgreSQL***
+## Script para PostgreSQL
 > [cc1m_202202909_hr_postgres.sql](https://github.com/aurahtml/uvv_bd_1_cc1m/blob/main/pset1/cc1m_202202909_hr_postgres.sql)
 <p>A ESCREVER!! Lorem ipsum dolor sit amet. Sed adipisci tempore quo vero laudantium in similique nihil a dolore quae qui inventore iste. Eum voluptatem vero vel totam quaerat sed laudantium alias et reiciendis voluptatum sit incidunt consequatur.</p>
 
-## ***Script para MariaDB***
+## Script para MariaDB
 > [cc1m_202202909_hr_mysql.sql](https://github.com/aurahtml/uvv_bd_1_cc1m/blob/main/pset1/cc1m_202202909_hr_mysql.sql)
 <p>A ESCREVER!! Lorem ipsum dolor sit amet. Sed adipisci tempore quo vero laudantium in similique nihil a dolore quae qui inventore iste. Eum voluptatem vero vel totam quaerat sed laudantium alias et reiciendis voluptatum sit incidunt consequatur.</p>
