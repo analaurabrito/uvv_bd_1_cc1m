@@ -23,7 +23,7 @@
 > [cc1m_202202909_hr_mysql.sql](https://github.com/aurahtml/uvv_bd_1_cc1m/blob/main/pset1/cc1m_202202909_hr_mysql.sql)
 <p>A ESCREVER!! Lorem ipsum dolor sit amet. Sed adipisci tempore quo vero laudantium in similique nihil a dolore quae qui inventore iste. Eum voluptatem vero vel totam quaerat sed laudantium alias et reiciendis voluptatum sit incidunt consequatur.</p>
 
-####Observações:
+#### Observações:
 <p>Para a implementação de todos os códigos SQL é obrigatória a entrada no terminal utilizando o usuário root/administrador do sistema. Ademais, em ambos sitemas, ao se inserir os scripts usando o usuário designado como proprietário do banco de dados (analaura), é preciso que haja a verificação acerca da exigência da senha desse gerenciador e se necessário, o preenchimento dessa com o valor "computacao@raiz".</p>
 
 </br>
