@@ -1,6 +1,6 @@
 
 # PSet1
-###### Descrição da atividade
+###### Descrição dos processos da atividade
 
 ****
 
