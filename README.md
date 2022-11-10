@@ -5,7 +5,7 @@
 **Turma:** CC1M </br>
 **Disciplina:** Design e Desenvolvimento de Banco de Dados </br>
 **Professor:** Abrantes Araújo Silva Filho </br>
-**Instituição:** UVV (Universidade de-Vila Velha)</br>
+**Instituição:** UVV (Universidade de Vila-Velha)</br>
 
 ****
 
