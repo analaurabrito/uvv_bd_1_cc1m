@@ -22,6 +22,7 @@
 ## Script para MariaDB
 > [cc1m_202202909_hr_mysql.sql](https://github.com/aurahtml/uvv_bd_1_cc1m/blob/main/pset1/cc1m_202202909_hr_mysql.sql)
 <p>Mais uma adaptação do modelo, dessa vez seguindo a documentação do SGBD MariaDB/MySQL, realizando as alterações na sintaxe do script necessárias para a implementação do banco de dados no Sistema de Gerenciamento em questão. Nessa parte do projeto foram criados o usuário com as devidas permissões de administração e o database a ser utilizado para o desenvolvimento do projeto no terminal. Além disso, conta com ambos os blocos de criação de tabelas (com todos os adendos) e de inserção de dados, da mesma forma que a etapa anterior. </p>
+</br>
 
 #### ***Observações:***
 <p>Para a implementação de todos os códigos SQL é obrigatória a entrada no terminal utilizando o usuário root/administrador do sistema. Ademais, em ambos sitemas, ao se inserir os scripts usando o usuário designado como proprietário do banco de dados (analaura), é preciso que haja a verificação acerca da exigência da senha desse gerenciador e se necessário, o preenchimento dessa com o valor "computacao@raiz".</p>
