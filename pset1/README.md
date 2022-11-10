@@ -17,11 +17,11 @@
 
 ## Script para PostgreSQL
 > [cc1m_202202909_hr_postgres.sql](https://github.com/aurahtml/uvv_bd_1_cc1m/blob/main/pset1/cc1m_202202909_hr_postgres.sql)
-<p>O modelo criado no tópico acima adaptado para a linguagem SQL, seguindo a documentação para o Sistema de Gerenciamento de Banco de Dados PostgreSQL, pronto para ser implementado no terminal do SGBD. O código conta com todas as chaves, restrições e comentários criados no projeto conceitual, além de um bloco com os dados a serem inseridos, segundo disponibilizado pelo professor para ser obtido.</p>
+<p>O modelo criado no tópico acima adaptado para a linguagem SQL, seguindo a documentação para o Sistema de Gerenciamento de Banco de Dados PostgreSQL, pronto para ser implementado no terminal do SGBD, começando pela criação de usuário gerenciador, database e schema. O código conta com todas as chaves, restrições e comentários criados no projeto conceitual, além de um bloco com os dados a serem inseridos, segundo disponibilizado pelo professor para ser obtido.</p>
 
 ## Script para MariaDB
 > [cc1m_202202909_hr_mysql.sql](https://github.com/aurahtml/uvv_bd_1_cc1m/blob/main/pset1/cc1m_202202909_hr_mysql.sql)
-<p>A ESCREVER!! Lorem ipsum dolor sit amet. Sed adipisci tempore quo vero laudantium in similique nihil a dolore quae qui inventore iste. Eum voluptatem vero vel totam quaerat sed laudantium alias et reiciendis voluptatum sit incidunt consequatur.</p>
+<p>Mais uma adaptação do modelo, dessa vez seguindo a documentação do SGBD MariaDB/MySQL, realizando as alterações na sintaxe do script necessárias para a implementação do banco de dados no Sistema de Gerenciamento em questão. Nessa parte do projeto foram criados o usuário com as devidas permissões de administração e o database a ser utilizado para o desenvolvimento do projeto no terminal. Além disso, conta com ambos os blocos de criação de tabelas (com todos os adendos) e de inserção de dados, da mesma forma que a etapa anterior. </p>
 
 #### ***Observações:***
 <p>Para a implementação de todos os códigos SQL é obrigatória a entrada no terminal utilizando o usuário root/administrador do sistema. Ademais, em ambos sitemas, ao se inserir os scripts usando o usuário designado como proprietário do banco de dados (analaura), é preciso que haja a verificação acerca da exigência da senha desse gerenciador e se necessário, o preenchimento dessa com o valor "computacao@raiz".</p>
