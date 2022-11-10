@@ -1,3 +1,4 @@
+</br>
 
 # Descrição dos processos: *PSet1*
 
@@ -21,3 +22,5 @@
 ## Script para MariaDB
 > [cc1m_202202909_hr_mysql.sql](https://github.com/aurahtml/uvv_bd_1_cc1m/blob/main/pset1/cc1m_202202909_hr_mysql.sql)
 <p>A ESCREVER!! Lorem ipsum dolor sit amet. Sed adipisci tempore quo vero laudantium in similique nihil a dolore quae qui inventore iste. Eum voluptatem vero vel totam quaerat sed laudantium alias et reiciendis voluptatum sit incidunt consequatur.</p>
+
+</br>
