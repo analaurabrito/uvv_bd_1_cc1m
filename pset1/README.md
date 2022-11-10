@@ -11,5 +11,5 @@
 ****
 
 ### ***Modelo no Power Architect***
-###### [cc1m_202202909_hr.arquitect]([https://duckduckgo.com](https://github.com/aurahtml/uvv_bd_1_cc1m/blob/main/pset1/cc1m_202202909_hr.architect)
+###### [cc1m_202202909_hr.arquitect](https://github.com/aurahtml/uvv_bd_1_cc1m/blob/main/pset1/cc1m_202202909_hr.architect)
 <p>Modelo do Projeto Conceitual desenvolvido na aplicação Power Arquitect. Esse modelo segue a proposta de banco de dados a ser recriada através desse trabalho, com adição de alterações influenciadas pelos questionamentos e os conhecimentos gerados pelo Problem-Setting.</p>
