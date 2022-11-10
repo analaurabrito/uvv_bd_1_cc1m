@@ -13,11 +13,11 @@
 
 ## Modelo no Power Architect
 > [cc1m_202202909_hr.arquitect](https://github.com/aurahtml/uvv_bd_1_cc1m/blob/main/pset1/cc1m_202202909_hr.architect)
-<p>Modelo do Projeto Conceitual desenvolvido na aplicação Power Arquitect. Esse modelo segue a proposta de banco de dados a ser recriada através desse trabalho, com adição de alterações influenciadas pelos questionamentos e os conhecimentos gerados pelo Problem-Setting.</p>
+<p>Modelo do Projeto Conceitual desenvolvido na aplicação Power Arquitect. Esse modelo segue a proposta de banco de dados a ser recriada através desse trabalho, com adição de alterações influenciadas pelos questionamentos e os conhecimentos gerados pelo Problem-Setting. Ele conta com a primeira etapa de construção das tabelas, colunas, tipo de dados, chaves primária, estrangeira e únicas, restrições, tendo todos esse itens comentados.</p>
 
 ## Script para PostgreSQL
 > [cc1m_202202909_hr_postgres.sql](https://github.com/aurahtml/uvv_bd_1_cc1m/blob/main/pset1/cc1m_202202909_hr_postgres.sql)
-<p>A ESCREVER!! Lorem ipsum dolor sit amet. Sed adipisci tempore quo vero laudantium in similique nihil a dolore quae qui inventore iste. Eum voluptatem vero vel totam quaerat sed laudantium alias et reiciendis voluptatum sit incidunt consequatur.</p>
+<p>O modelo criado no tópico acima adaptado para a linguagem SQL, seguindo a documentação para o Sistema de Gerenciamento de Banco de Dados PostgreSQL, pronto para ser implementado no terminal do SGBD. O código conta com todas as chaves, restrições e comentários criados no projeto conceitual, além de um bloco com os dados a serem inseridos, segundo disponibilizado pelo professor para ser obtido.</p>
 
 ## Script para MariaDB
 > [cc1m_202202909_hr_mysql.sql](https://github.com/aurahtml/uvv_bd_1_cc1m/blob/main/pset1/cc1m_202202909_hr_mysql.sql)
